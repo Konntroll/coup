@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OpponentComponent } from './opponent/opponent.component';
 import { TableComponent } from './table/table.component';
+import { CommComponent } from './comm/comm.component';
+
+import { ServerService } from './server.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     OpponentComponent,
-    TableComponent
+    TableComponent,
+    CommComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
