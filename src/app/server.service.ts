@@ -7,15 +7,18 @@ import { io } from 'socket.io-client';
 })
 export class ServerService {
 
-  socket;
+  socket = io(environment.SOCKET_ENDPOINT);;
 
   constructor() { }
 
-  setupSocketConnection() {
-    this.socket = io(environment.SOCKET_ENDPOINT);
+  listen() {
+    this.socket.on('response', (data: string) => {
+      console.log(data);
+    });
   }
 
-  sendMessage() {
-    this.socket.emit('message', 'hello from the other side');
+  public sendMessage(message: string = 'hello from the other side') {
+    this.socket.emit('message', message);
   }
+
 }
