@@ -1,6 +1,6 @@
 #table {
   position: fixed;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   top: 50%;

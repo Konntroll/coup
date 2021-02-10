@@ -1,4 +1,5 @@
 #comm {
+  display: none;
   position: fixed;
   width: 50%;
   top: 50%;
