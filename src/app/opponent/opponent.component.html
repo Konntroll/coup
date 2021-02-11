@@ -1,8 +1,19 @@
+<div id="comm"></div>
 <div id="wrapper">
-  <div id="comm"></div>
-  <div *ngFor="let opp of opps" (click)="transmit(opp)">
-    <span>
+  <div *ngFor="let opp of opps" (click)="transmit(opp)" class="tiles">
+    <div class="names">
       {{ opp }}
-    </span>
+    </div>
+    <div class="info">
+      <img class="coins" src="..\..\assets\img\coins.png" />
+      <div>2</div>
+      <button class="interact">Action</button>
+    </div>
+    <div>
+      <img class="cards" src="..\..\assets\img\captain.png" />
+    </div>
+    <div>
+      <img class="cards" src="..\..\assets\img\contessa.png" />
+    </div>
   </div>
 </div>
